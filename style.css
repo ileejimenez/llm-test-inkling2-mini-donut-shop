@@ -1,0 +1,176 @@
+/* Golden Ring Donuts — style.css */
+
+:root {
+  --cream: #fff8ec;
+  --caramel: #d9822b;
+  --caramel-dark: #b5661d;
+  --brown: #4a2c17;
+  --pink: #f6a8b8;
+  --ink: #2d1c0e;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: Georgia, 'Times New Roman', serif;
+  background: var(--cream);
+  color: var(--ink);
+  line-height: 1.6;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  border-bottom: 3px solid var(--caramel);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 2rem;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--caramel-dark);
+  text-decoration: none;
+}
+
+nav a {
+  color: var(--brown);
+  text-decoration: none;
+  margin-left: 1.2rem;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+nav a:hover { color: var(--caramel); }
+
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(160deg, #ffe9c7 0%, #ffd9a3 100%);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: var(--brown);
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: var(--caramel-dark);
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--caramel);
+  color: #fff;
+  padding: 0.8rem 1.8rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.btn:hover { background: var(--caramel-dark); transform: translateY(-2px); }
+
+section { padding: 3.5rem 2rem; max-width: 1100px; margin: 0 auto; }
+
+section h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--brown);
+  margin-bottom: 2rem;
+  border-bottom: 3px solid var(--pink);
+  display: inline-block;
+  width: 100%;
+  padding-bottom: 0.5rem;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.25rem;
+}
+
+.donut-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 4px 12px rgba(74, 44, 23, 0.12);
+  border-top: 6px solid var(--caramel);
+  transition: transform 0.2s;
+}
+
+.donut-card:hover { transform: translateY(-4px); }
+
+.donut-card h3 { color: var(--brown); font-size: 1.15rem; margin-bottom: 0.4rem; }
+.donut-card p { font-size: 0.95rem; color: #6b5138; margin-bottom: 0.75rem; }
+
+.price {
+  display: inline-block;
+  background: var(--pink);
+  color: var(--brown);
+  font-weight: bold;
+  padding: 0.2rem 0.9rem;
+  border-radius: 999px;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.about-text p { margin-bottom: 1rem; }
+
+.about-photo {
+  background: #fff;
+  border-radius: 12px;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+  box-shadow: 0 4px 12px rgba(74, 44, 23, 0.12);
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.info-box {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(74, 44, 23, 0.1);
+  text-align: center;
+}
+
+.info-box h3 { color: var(--caramel-dark); margin-bottom: 0.75rem; }
+.info-box ul { list-style: none; }
+.info-box li { margin: 0.35rem 0; }
+
+footer {
+  background: var(--brown);
+  color: var(--cream);
+  text-align: center;
+  padding: 2rem;
+}
+
+footer p { margin: 0.3rem 0; font-size: 0.9rem; }
+
+@media (max-width: 700px) {
+  header { flex-direction: column; gap: 0.5rem; }
+  .about, .info-grid { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 2.2rem; }
+}
